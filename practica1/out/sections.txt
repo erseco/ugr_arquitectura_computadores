@@ -1,0 +1,2 @@
+En funcA: esta sección la ejecuta el thread 1
+En funcB: esta sección la ejecuta el thread 2
