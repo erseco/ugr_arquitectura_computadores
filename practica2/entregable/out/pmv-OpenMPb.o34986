@@ -1,0 +1,13 @@
+Id. usuario del trabajo: A2estudiante29
+Id. del trabajo: 34986.atcgrid
+Nombre del trabajo especificado por usuario: pmv-OpenMPb
+Nodo que ejecuta qsub: atcgrid
+Directorio en el que se ha ejecutado qsub: /home/A2estudiante29
+Cola: ac
+pmv-OpenMP-b
+Tiempo(seg.):0.002009444	 / Tamaño:100	/ V2[0]=328350.000000 V2[99]=818400.000000
+Tiempo(seg.):0.010613414	 / Tamaño:500	/ V2[0]=41541750.000000 V2[499]=103792000.000000
+Tiempo(seg.):0.020439962	 / Tamaño:1000	/ V2[0]=332833500.000000 V2[999]=831834000.000000
+Tiempo(seg.):0.111904285	 / Tamaño:5000	/ V2[0]=41654167500.000000 V2[4999]=104129170000.000000
+Tiempo(seg.):0.224905885	 / Tamaño:10000	/ V2[0]=333283335000.000000 V2[9999]=833183340000.000000
+Tiempo(seg.):2.506143905	 / Tamaño:50000	/ V2[0]=41665416675000.000000 V2[49999]=104162916700000.000000

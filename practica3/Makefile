@@ -26,7 +26,7 @@ CC = gcc-4.9 -O2 -fopenmp
 endif
 
 # Colección de objetos a compilar
-OBJECTS = shared-clause shared-clauseModificado private-clause private-clauseModificado private-clauseModificado3 firstlastprivate copyprivate-clause copyprivate-clauseModificado reduction-clause reduction-clauseModificado reduction-clauseModificado7 pmv-secuencial pmv-secuencialGlobales pmv-OpenMP-a pmv-OpenMP-b pmv-OpenMP-reduction
+OBJECTS = if-clause if-clauseModificado scheduled-clause scheduled-clauseModificado scheduled-clause scheduled-clauseModificado4 scheduled-clauseModificado4 pmtv-secuencial pmtv-OpenMP pmm-secuencial pmm-OpenMP
 
 # TODO (sin empaquetado)
 all: clean $(OBJECTS)
@@ -36,11 +36,11 @@ all: clean $(OBJECTS)
 $(OBJECTS):
 	$(CC) -o $(BIN)/$@ $(SRC)/$@.c
 
-sumavectores:
-	gcc -O2 $(SRC)/SumaVectores.c -o $(BIN)/SumaVectores -lrt
+# sumavectores:
+# 	gcc -O2 $(SRC)/SumaVectores.c -o $(BIN)/SumaVectores -lrt
 
-sumavectores_asm:
-	gcc -O2 $(SRC)/SumaVectores.c -S -o $(SRC)/SumaVectores.s -lrt
+# sumavectores_asm:
+# 	gcc -O2 $(SRC)/SumaVectores.c -S -o $(SRC)/SumaVectores.s -lrt
 
 
 # EMPAQUETADO
