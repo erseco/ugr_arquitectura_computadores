@@ -1,0 +1,37 @@
+Id/home/A2estudiante29 usuario del trabajo: A2estudiante29
+Id/home/A2estudiante29 del trabajo: 36206.atcgrid
+Nombre del trabajo especificado por usuario: ej7_atcgrid
+Nodo que ejecuta qsub: atcgrid
+Directorio en el que se ha ejecutado qsub: /home/A2estudiante29
+Cola: ac
+Nodos asignados al trabajo:
+atcgrid1
+atcgrid1
+atcgrid1
+atcgrid1
+atcgrid1
+atcgrid1
+atcgrid1
+atcgrid1
+atcgrid1
+atcgrid1
+atcgrid1
+atcgrid1
+static y chunk por defecto
+Tiempo = 0.058979410	 Primera = 122880	 Ultima=8
+static y chunk 1
+Tiempo = 0.034590594	 Primera = 122880	 Ultima=8
+static y chunk 64
+Tiempo = 0.033459864	 Primera = 122880	 Ultima=8
+dynamic y chunk por defecto
+Tiempo = 0.036976165	 Primera = 122880	 Ultima=8
+dynamic y chunk 1
+Tiempo = 0.037256078	 Primera = 122880	 Ultima=8
+dynamic y chunk 64
+Tiempo = 0.033246293	 Primera = 122880	 Ultima=8
+guided y chunk por defecto
+Tiempo = 0.041331375	 Primera = 122880	 Ultima=8
+guided y chunk 1
+Tiempo = 0.037069255	 Primera = 122880	 Ultima=8
+guided y chunk 64
+Tiempo = 0.040510096	 Primera = 122880	 Ultima=8

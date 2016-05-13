@@ -4,6 +4,9 @@
 *.obj
 *.elf
 
+#Omitir compilados
+bin/*
+
 # Precompiled Headers
 *.gch
 *.pch
