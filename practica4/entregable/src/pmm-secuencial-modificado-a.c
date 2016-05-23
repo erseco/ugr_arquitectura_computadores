@@ -37,8 +37,8 @@ int main(int argc, char **argv)
 
     // Multiplicacion
     for (i=0; i<N; i++)
-        for (j=0; j<N; j++)
-            for (k=0; k<N; k++)
+        for (k=0; k<N; k++)
+            for (j=0; j<N; j++)
                 a[i][j] += b[i][k] * c[k][j];
 
     clock_gettime(CLOCK_REALTIME,&cgt2);

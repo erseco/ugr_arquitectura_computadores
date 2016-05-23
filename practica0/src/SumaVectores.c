@@ -54,7 +54,7 @@ int main(int argc, char** argv)
 	printf("Error en la reserva de espacio para los vectores\n");
 	exit(-2);
 	}
-	#endif
+#endif
 	//Inicializar vectores
 	for(i=0; i<N; i++){
 	v1[i] = N*0.1+i*0.1; v2[i] = N*0.1-i*0.1; //los valores dependen de N

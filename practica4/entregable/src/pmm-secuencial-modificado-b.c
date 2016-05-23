@@ -10,6 +10,11 @@ int main(int argc, char **argv)
 {
     unsigned i, j, k;
 
+    int total = 0;
+    int h;
+    int s1,s2,s3,s4,s5,s6,s7,s8;
+    s1=s2=s3=s4=s5=s6=s7=s8=0;
+
     if(argc < 2)
     {
         fprintf(stderr, "falta size\n");
@@ -33,13 +38,35 @@ int main(int argc, char **argv)
 
     struct timespec cgt1,cgt2; double ncgt;
 
+    int iterations = N/8;
+
     clock_gettime(CLOCK_REALTIME,&cgt1);
 
     // Multiplicacion
     for (i=0; i<N; i++)
         for (j=0; j<N; j++)
-            for (k=0; k<N; k++)
-                a[i][j] += b[i][k] * c[k][j];
+        {
+            s1=s2=s3=s4=s5=s6=s7=s8=0;
+            for (h=0, k=0;h < iterations; ++h, k+=8)
+            {
+                    s1 += (b[i][k]  *c[k][j]  );
+                    s2 += (b[i][k+1]*c[j][k+1]);
+                    s3 += (b[i][k+2]*c[j][k+2]);
+                    s4 += (b[i][k+3]*c[j][k+3]);
+                    s5 += (b[i][k+4]*c[j][k+4]);
+                    s6 += (b[i][k+5]*c[j][k+5]);
+                    s7 += (b[i][k+6]*c[j][k+6]);
+                    s8 += (b[i][k+7]*c[j][k+7]);
+            }
+
+            total = s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8;
+            a[i][j]=total;
+
+            for(k=iterations*8; k<N; ++k)
+                total += (b[i][k]*c[j][k]);
+
+            a[i][j]=total;
+        }
 
     clock_gettime(CLOCK_REALTIME,&cgt2);
 

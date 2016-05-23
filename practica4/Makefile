@@ -15,7 +15,7 @@ BIN 	= bin
 SRC 	= src
 
 # Definición de compiladores
-CC = gcc -O2 -fopenmp
+CC = gcc -O2
 
 # banderas para el enlazador
 # Se indica directorios donde encontrar las funciontecas con -L. Usando -l seguido del
@@ -26,15 +26,28 @@ CC = gcc-4.9 -O2 -fopenmp
 endif
 
 # Colección de objetos a compilar
-OBJECTS = values if-clause if-clauseModificado schedule-clause scheduled-clause scheduleg-clause scheduled-clauseModificado scheduled-clauseModificado4 scheduled-clauseModificado5 pmtv-secuencial pmtv-OpenMP pmm-secuencial pmm-OpenMP
+OBJECTS = figura1-original figura1-modificado-a figura1-modificado-b pmm-secuencial pmm-secuencial-modificado-a pmm-secuencial-modificado-b
+#pmm-secuencial
 
 # TODO (sin empaquetado)
-all: clean $(OBJECTS)
+all: clean $(OBJECTS) daxpy
 
 
 # COMPILACION (asi de chulo)
 $(OBJECTS):
 	$(CC) -o $(BIN)/$@ $(SRC)/$@.c
+	$(CC) -S -o $(SRC)/$@.s $(SRC)/$@.c
+
+
+daxpy:
+	gcc -O0 -o $(BIN)/daxpy-O0 $(SRC)/daxpy.c
+	gcc -O2 -o $(BIN)/daxpy-O2 $(SRC)/daxpy.c
+	gcc -O3 -o $(BIN)/daxpy-O3 $(SRC)/daxpy.c
+	gcc -O0 -S -o $(SRC)/daxpy-O0.s $(SRC)/daxpy.c
+	gcc -O2 -S -o $(SRC)/daxpy-O2.s $(SRC)/daxpy.c
+	gcc -O3 -S -o $(SRC)/daxpy-O3.s $(SRC)/daxpy.c
+
+
 
 # sumavectores:
 # 	gcc -O2 $(SRC)/SumaVectores.c -o $(BIN)/SumaVectores -lrt
