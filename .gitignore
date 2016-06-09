@@ -5,7 +5,7 @@
 *.elf
 
 #Omitir compilados
-bin/*
+bin/
 /entregas/
 
 # Precompiled Headers
