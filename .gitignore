@@ -5,8 +5,6 @@
 *.elf
 
 #Omitir compilados
-bin/
-/entregas/
 
 # Precompiled Headers
 *.gch
